@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/word_to_guess_text_view_MA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Word to guess"
+        android:textSize="25sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"/>
+
+    <TextView
+        android:id="@+id/timer_text_view_MA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00 : 00"
+        android:textSize="25sp"
+        android:layout_marginTop="25dp"
+        android:layout_below="@id/word_to_guess_text_view_MA"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+        android:id="@+id/score_text_view_MA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="35sp"
+        android:layout_marginTop="25dp"
+        android:layout_below="@id/timer_text_view_MA"
+        android:layout_centerHorizontal="true"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/skip_word_button_MA"
+        android:text="Skip Word"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="15dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/next_word_button_MA"
+        android:text="Next Word"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp" />
+
+</RelativeLayout>
