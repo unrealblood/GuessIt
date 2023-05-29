@@ -1,5 +1,6 @@
 package com.strength.guessit
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
@@ -51,6 +52,7 @@ class MainActivity : AppCompatActivity() {
 
             if(currentGameWordIndex == 10) {
                 //finish game
+                GameFinished()
             }
 
             if(currentGameWordIndex >= 9) { currentGameWordIndex = 9 }
@@ -66,6 +68,7 @@ class MainActivity : AppCompatActivity() {
 
             if(currentGameWordIndex == 10) {
                 //finish game
+                GameFinished()
             }
 
             if(currentGameWordIndex >= 9) { currentGameWordIndex = 9 }
@@ -87,6 +90,14 @@ class MainActivity : AppCompatActivity() {
 
         override fun onFinish() {
             //result activity
+            GameFinished()
         }
+    }
+
+    private fun GameFinished() {
+        val resultActivityIntent = Intent(this@MainActivity, ResultActivity::class.java)
+        resultActivityIntent.putExtra("KEY_SCORE", score)
+        startActivity(resultActivityIntent)
+        finish()
     }
 }
